@@ -13,7 +13,7 @@ The new triple AAA game
 - 3 jours 1/2
 
 ## Consignes spécifiques
-- Une seule mécanique de jeu au début (armes à feu, au nombre 3 initialement)
+- Une seule mécanique de jeu au début (armes à feu, au nombre de 3 initialement)
 - Niveaux fixes (pas en procédural)
 - Reset du niveau quand on meurt
 - Mécanique de jeu simple au début : les abilités seront une fonctionnalité supplémentaire
