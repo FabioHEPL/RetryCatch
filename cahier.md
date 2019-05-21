@@ -22,7 +22,9 @@ Comment sait-on que la tâche est terminée ?
 ### Items
 #### Inventaire
 Comment sait-on que la tâche est terminée ?
-- un nombre de slots prédéfinis, seulement pour les armes
+- un nombre de slots prédéfinis (pour l'instant seulement pour les armes)
+- ajouter des items
+- retirer des items
 
 #### Fonction de pickup
 Comment sait-on que la tâche est terminée ?
