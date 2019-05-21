@@ -1,7 +1,12 @@
 # Cahier des charges
 
-## Fonctionnalités
+## Consignes spécifiques
+- Une seule mécanique de jeu au début (armes à feu, au nombre de 3 initialement)
+- Niveaux fixes (pas en procédural)
+- Reset du niveau quand on meurt
+- Mécanique de jeu simple au début : les abilités seront une fonctionnalité supplémentaire
 
+## Fonctionnalités
 ### Déplacement
 Faire un déplacement vertical et horizontal dans l'espace 2D
 Comment sait-on que la tâche est terminée ?
