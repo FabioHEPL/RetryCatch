@@ -37,5 +37,7 @@ Comment sait-on que la tâche est terminée ?
 - **Préconditions** : il faut que l'arme choisie soit dans l'inventaire
 - **Postconditions** : //
 
+### Ennemis
+
 
 ## Charte graphique
