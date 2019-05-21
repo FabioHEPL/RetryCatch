@@ -2,8 +2,6 @@
 
 ## Fonctionnalités
 
-## Charte graphique
-
 ### Déplacement
 Faire un déplacement vertical et horizontal dans l'espace 2D
 Comment sait-on que la tâche est terminée ?
@@ -31,3 +29,6 @@ Comment sait-on que la tâche est terminée ?
 - à l'aide d'un input, le joueur peut changer d'arme
 - Préconditions : il faut que l'arme choisie soit dans l'inventaire
 - Postconditions : //
+
+
+## Charte graphique
