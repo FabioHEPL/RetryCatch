@@ -27,8 +27,8 @@ Comment sait-on que la tâche est terminée ?
 #### Fonction de selection
 Comment sait-on que la tâche est terminée ?
 - à l'aide d'un input, le joueur peut changer d'arme
-- Préconditions : il faut que l'arme choisie soit dans l'inventaire
-- Postconditions : //
+- **Préconditions** : il faut que l'arme choisie soit dans l'inventaire
+- **Postconditions** : //
 
 
 ## Charte graphique
