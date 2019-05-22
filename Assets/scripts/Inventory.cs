@@ -6,12 +6,19 @@ public class Inventory : MonoBehaviour
 {
     public List<Slot> slots;
 
+
+
     private void Awake()
     {
+        // Create slot list
         foreach (Transform t in transform)
         {
-            slots.Add(t.GetComponent<Slot>());
+            Slot slot = t.GetComponent<Slot>();
+            if (slot != null)
+                slots.Add(slot);            
         }
+
+       // slots.Reverse();
     }
 
     // Start is called before the first frame update
@@ -28,15 +35,19 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(GameObject item)
     {
- 
-
         foreach (Slot slot in slots)
         {
-            if (slot.item == null)
+            if (slot.isEmpty())
             {
-                slot.item = item;
-                break;
+                slot.Item = item;
+                item.transform.parent = slot.gameObject.transform;
+                item.transform.localPosition = new Vector3(0, 0, slot.gameObject.transform.localPosition.z);
+                item.transform.localRotation = Quaternion.identity;
+                item.transform.localScale = new Vector3(slotScale.x, slotScale.y, 1);
             }
         }
     }
+
+    [SerializeField]
+    private Vector2 slotScale;
 }

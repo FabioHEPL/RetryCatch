@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    public GameObject item = null;
+    public GameObject Item
+    {
+        get => _item;
+        set => _item = value;
+    }
+
+    public string InputName
+    {
+        get => _inputName;
+    }
+
+
+    public bool isEmpty()
+    {
+        return transform.childCount == 0;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,4 +32,10 @@ public class Slot : MonoBehaviour
     {
         
     }
+
+    [SerializeField]
+    private GameObject _item = null;
+
+    [SerializeField]
+    private string _inputName = "";
 }

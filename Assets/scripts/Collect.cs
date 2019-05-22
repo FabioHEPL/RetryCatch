@@ -20,17 +20,18 @@ public class Collect : MonoBehaviour, IAction
             new Vector2(transform.position.x, transform.position.y),
             _radius);
 
-        Debug.Log(collider);
-        Debug.Log(new Vector2(transform.position.x, transform.position.y));
-
         Collectable collectable = collider?.GetComponent<Collectable>();
 
         if (collectable != null)
         {
             _inventory.AddItem(collectable.gameObject);            
-            collectable.gameObject.SetActive(false);
-            collectable.enabled = false;
+
+            // Disable collider so it doesn't collide with player            
             collider.enabled = false;
+
+            // Disable collectable because we just picked it up
+            //collectable.gameObject.SetActive(false);
+            collectable.enabled = false;
         }
     }
 
