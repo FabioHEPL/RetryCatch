@@ -15,8 +15,6 @@ public class Rifle : Weapon
         var recuperationPSourisDegee = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         Instantiate(Bullet, transform.position + new Vector3(direction.x, direction.y, 0.0f) * fireDistance, Quaternion.Euler(0.0f, 0.0f, recuperationPSourisDegee));
-        Debug.Log(direction);
-
     }
 
     // Start is called before the first frame update
