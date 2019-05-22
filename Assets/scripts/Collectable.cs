@@ -5,6 +5,7 @@ using System.Collections;
 public interface ICollectable
 {
     int ItemID { get; }
+ 
 }
 
 public class Collectable : MonoBehaviour, ICollectable
@@ -31,4 +32,8 @@ public class Collectable : MonoBehaviour, ICollectable
 
     [SerializeField]
     private int _itemID = 0;
+
+
+    //[SerializeField]
+    //private Item_2 _item;
 }

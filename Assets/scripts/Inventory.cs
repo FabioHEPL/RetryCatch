@@ -2,68 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ICollection<T>
+public class Inventory : MonoBehaviour
 {
-    void AddElement(T element);
-    T RemoveElement(int id);
-    T[] Elements { get; }
-}
+    public List<Slot> slots;
 
-public class Inventory : MonoBehaviour, ICollection<Item>
-{
-    // -------------------------------------------------------------------------------------
-    // @ PUBLIC
-    // -------------------------------------------------------------------------------------
-    public void AddElement(Item element)
+    private void Awake()
     {
-        _elements.Add(element);
-    }    
-
-    public Item RemoveElement(int id)
-    {
-        Item element = _elements[id];
-        _elements.RemoveAt(id);
-
-        return element;
-    }
-
-    public void AddElement(int itemID)
-    {
-        switch (itemID)
+        foreach (Transform t in transform)
         {
-            case 0:
-                //AddElement(new Weapon());
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
+            slots.Add(t.GetComponent<Slot>());
         }
     }
 
-    public Item[] Elements => _elements.ToArray();
-    // -------------------------------------------------------------------------------------
-    // @ PRIVATE
-    // -------------------------------------------------------------------------------------
-    private void Awake()
-    {
-        _elements = new List<Item>();
-    }
-
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
-
+        
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
-
+        
     }
 
-    [SerializeField]
-    private List<Item> _elements;
+    public void AddItem(GameObject item)
+    {
+ 
+
+        foreach (Slot slot in slots)
+        {
+            if (slot.item == null)
+            {
+                slot.item = item;
+                break;
+            }
+        }
+    }
 }
-
-
