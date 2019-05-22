@@ -15,7 +15,7 @@ public class Revolver : Weapon
         direction.Normalize();
         var recuperationPSourisDegee = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg-90.0f;
 
-        Instantiate(Bullet, transform.position, Quaternion.Euler(0.0f, 0.0f, recuperationPSourisDegee));
+        Instantiate(Bullet, transform.position + new Vector3(direction.x, direction.y, 0.0f) * fireDistance, Quaternion.Euler(0.0f, 0.0f, recuperationPSourisDegee));
     }
 
     // Start is called before the first frame update

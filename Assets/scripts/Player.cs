@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         // For every slot, check if contains a weapon
         // if it does, select that weapon
-        foreach (Slot slot in _inventory.slots)
+        foreach (Slot slot in _inventory.Slots)
         {            
             if (Input.GetButtonDown(slot.InputName))
             {               
@@ -49,4 +49,14 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Inventory _inventory;
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("wall"))
+        {
+
+        }   
+    }
 }

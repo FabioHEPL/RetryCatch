@@ -10,6 +10,13 @@ public class WeaponSlot : MonoBehaviour
         set => setItem(value);
     }
 
+    private void Awake()
+    {
+        // TODO:
+        //if (_item != null)
+        //    setItem(_item);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

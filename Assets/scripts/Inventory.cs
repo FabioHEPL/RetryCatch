@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Slot> slots;
+    public List<Slot> Slots
+    {
+        get => _slots;
+    }
 
     private void Awake()
     {
@@ -13,7 +16,7 @@ public class Inventory : MonoBehaviour
         {
             Slot slot = t.GetComponent<Slot>();
             if (slot != null)
-                slots.Add(slot);            
+                _slots.Add(slot);            
         }
 
        // slots.Reverse();
@@ -36,7 +39,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(GameObject item)
     {
-        foreach (Slot slot in slots)
+        foreach (Slot slot in _slots)
         {
             if (slot.isEmpty())
             {
@@ -50,6 +53,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    private List<Slot> _slots = new List<Slot>();
     [SerializeField]
     private Vector2 slotScale;
 }

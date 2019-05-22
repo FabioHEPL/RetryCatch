@@ -6,6 +6,8 @@ public class Movement : MonoBehaviour
 {
 
     public float speed = 10.0f;
+    public float collisionRadius = 1f;
+    public float collisionDistance = 0.25f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,15 @@ public class Movement : MonoBehaviour
         float inputx = Input.GetAxis("Horizontal");
         float inputy = Input.GetAxis("Vertical");
         Vector2 getaxis = new Vector2(inputx, inputy);
-        Move(getaxis);
+
+        RaycastHit2D hit2D = Physics2D.CircleCast((Vector2)transform.position, collisionRadius, getaxis, collisionDistance);
+        Debug.DrawRay((Vector2)transform.position, getaxis * 5, Color.blue);
+        Debug.DrawLine((Vector2)transform.position, getaxis * 5, Color.green);
+        if (hit2D)
+            Debug.Log(hit2D.collider.name);
+
+        if (!hit2D || hit2D.collider.CompareTag("player"))
+            Move(getaxis);
     }
 
     public void Move(Vector2 direction)
