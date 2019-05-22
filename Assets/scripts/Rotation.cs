@@ -16,7 +16,7 @@ public class Rotation : MonoBehaviour
         Vector2 direction = Helper.mousePosition() - (Vector2)transform.position;
         direction.Normalize();
 
-        float zRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float zRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg-90.0f;
 
         transform.eulerAngles =  new Vector3(0.0f, 0.0f, zRotation);
     }

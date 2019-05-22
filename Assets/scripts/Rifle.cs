@@ -12,7 +12,7 @@ public class Rifle : Weapon
     public override void Fire(Vector2 direction)
     {
         direction.Normalize();
-        var recuperationPSourisDegee = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        var recuperationPSourisDegee = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg-90.0f;
 
         Instantiate(Bullet, transform.position + new Vector3(direction.x, direction.y, 0.0f) * fireDistance, Quaternion.Euler(0.0f, 0.0f, recuperationPSourisDegee));
     }
