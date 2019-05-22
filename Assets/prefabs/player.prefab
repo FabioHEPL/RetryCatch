@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 5
-  _inventory: {fileID: 0}
+  _inventory: {fileID: 8113781554261078406, guid: a76b23835dadaaa44a7557d8caf3f603,
+    type: 3}
 --- !u!114 &1502024596748808356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponSlot: {fileID: 131255528}
-  _inventory: {fileID: 0}
+  _inventory: {fileID: 8113781554261078406, guid: a76b23835dadaaa44a7557d8caf3f603,
+    type: 3}
 --- !u!1 &5770158924398014919
 GameObject:
   m_ObjectHideFlags: 0

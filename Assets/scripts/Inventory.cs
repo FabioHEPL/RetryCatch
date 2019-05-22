@@ -6,8 +6,6 @@ public class Inventory : MonoBehaviour
 {
     public List<Slot> slots;
 
-
-
     private void Awake()
     {
         // Create slot list
@@ -24,7 +22,10 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
+
+
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class Inventory : MonoBehaviour
                 item.transform.localPosition = new Vector3(0, 0, slot.gameObject.transform.localPosition.z);
                 item.transform.localRotation = Quaternion.identity;
                 item.transform.localScale = new Vector3(slotScale.x, slotScale.y, 1);
+                break;
             }
         }
     }
