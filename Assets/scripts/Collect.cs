@@ -18,9 +18,12 @@ public class Collect : MonoBehaviour, IAction
     {
         Collider2D collider = Physics2D.OverlapCircle(
             new Vector2(transform.position.x, transform.position.y),
-            _radius);
+            _radius,
+            LayerMask.GetMask("weapon"));
 
         Collectable collectable = collider?.GetComponent<Collectable>();
+
+        Debug.Log(collectable);
 
         if (collectable != null)
         {

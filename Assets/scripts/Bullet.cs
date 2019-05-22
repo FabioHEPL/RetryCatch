@@ -5,10 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float vitesseDeProjectile = 25.0f;
+    public float lifeSpan = 5;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, lifeSpan);
 
     }
 
@@ -21,5 +22,15 @@ public class Bullet : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.name);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         Destroy(this.gameObject);
     }
 }

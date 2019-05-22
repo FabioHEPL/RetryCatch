@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         float inputy = Input.GetAxis("Vertical");
         Vector2 getaxis = new Vector2(inputx, inputy);
 
-        RaycastHit2D hit2D = Physics2D.CircleCast((Vector2)transform.position, collisionRadius, getaxis, collisionDistance);
+        RaycastHit2D hit2D = Physics2D.CircleCast((Vector2)transform.position, collisionRadius, getaxis, collisionDistance, LayerMask.GetMask("wall"));
         Debug.DrawRay((Vector2)transform.position, getaxis * 5, Color.blue);
         Debug.DrawLine((Vector2)transform.position, getaxis * 5, Color.green);
         if (hit2D)
