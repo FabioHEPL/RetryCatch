@@ -36,7 +36,7 @@ public class Life : MonoBehaviour
         {
             Bullet bullet = collider2D.GetComponent<Bullet>();
                                       
-            Health -= bullet.da;
+            Health -= bullet.Damage;
             healthBar.setPercentage(Health);
             if (Health <= 0f)
             {
