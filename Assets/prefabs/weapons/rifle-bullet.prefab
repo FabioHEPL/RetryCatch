@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8457590248696116366}
   m_Layer: 11
   m_Name: rifle-bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f918f64c73f124aafedfeb09f7f213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseDeProjectile: 40
-  lifeSpan: 5
+  _speed: 25
+  _lifeSpan: 5
 --- !u!70 &6406551872479342799
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

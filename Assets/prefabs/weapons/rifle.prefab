@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8171906176522551382}
   - component: {fileID: 1696599271}
   - component: {fileID: 1696599272}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,8 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireDistance: 1.25
-  Bullet: {fileID: 862618989283617896, guid: 29813fed6b77ff34792297df444c745f, type: 3}
+  bullet: {fileID: 862618989283617896, guid: 29813fed6b77ff34792297df444c745f, type: 3}
   speed: 20
+  cooldown: 1.5
+  _ammo: 10
+  _id: 2
 --- !u!114 &1696599272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,4 +138,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c3a979563312449943714d28694eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemID: 0
+  _itemType: 0
