@@ -38,7 +38,6 @@ Comment sait-on que la tâche est terminée ?
 - **Postconditions** : //
 
 ### Ennemis
-
 #### Zone de trigger
 Comment sait-on que la tâche est terminée ?
 - lorsque le player rentre dans la zone de trigger, l'ennemi se retourne vers lui et tire dessus
@@ -47,4 +46,15 @@ Comment sait-on que la tâche est terminée ?
 Comment sait-on que la tâche est terminée ?
 - l'ennemi nous suit avec sa visée et nous tire dessus
 
+### Système de mort
+#### Drop objets
+...
+
+
+### Système de vie
+#### Barre de vie (HP)
+....
+
+#### Barre de vie ennemie
+....
 ## Charte graphique
