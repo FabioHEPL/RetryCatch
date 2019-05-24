@@ -57,4 +57,19 @@ Comment sait-on que la tâche est terminée ?
 
 #### Barre de vie ennemie
 ....
+
+### Munitions
+#### Collecter
+Nouvel item 
+
+#### Position dans l'inventaire
+
+
+
+### Shadow
+#### La mort
+Un cadavre est spawné à l'endroit où le joueur est mort.
+Les items qu'il avait collecté restent à l'endroit de la mort.
+
+#### 
 ## Charte graphique
