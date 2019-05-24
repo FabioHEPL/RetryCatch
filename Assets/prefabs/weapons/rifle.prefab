@@ -123,7 +123,7 @@ MonoBehaviour:
   fireDistance: 1.25
   bullet: {fileID: 862618989283617896, guid: 29813fed6b77ff34792297df444c745f, type: 3}
   speed: 20
-  cooldown: 1.5
+  cooldown: 0.5
   _ammo: 10
   _id: 2
 --- !u!114 &1696599272
