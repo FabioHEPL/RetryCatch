@@ -48,22 +48,23 @@ Comment sait-on que la tâche est terminée ?
 
 ### Système de mort
 #### Drop objets
-...
+Comment sait-on que la tâche est terminée ?
+- On drop tous les objets collectés à l'endroit où on est mort
+
+### Munitions
+#### Collecter
+
+
+#### Position dans l'inventaire
+
 
 
 ### Système de vie
 #### Barre de vie (HP)
-....
+
 
 #### Barre de vie ennemie
 ....
-
-### Munitions
-#### Collecter
-Nouvel item 
-
-#### Position dans l'inventaire
-
 
 
 ### Shadow
