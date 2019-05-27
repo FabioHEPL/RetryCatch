@@ -6,17 +6,20 @@ public class Enemy : MonoBehaviour
 {
     GameObject player;
     private WeaponSlot[] _weaponSlots;
-    public Transform avatar;
-
-    
+    public Transform avatar;     
     private HealthBar _healthBar;
 
     [Header("Health Bar Settings")]
     public Color restColor = Color.yellow;
     public Color alarmColor = Color.red;
-
     
     private bool _lookAtPlayer = false;
+
+    [SerializeField]
+    private bool _fire = false;
+
+    public float fireCooldown = 1f;
+
 
     private void Awake()
     {
@@ -40,6 +43,14 @@ public class Enemy : MonoBehaviour
                 transform.localRotation.y,
                 axeDeTire()));
         }
+
+        if (_fire)
+        {
+            foreach (WeaponSlot weaponSlot in _weaponSlots)
+            {
+                weaponSlot.Item.Fire(Vector2.zero);
+            }
+        }
     }
 
     private float axeDeTire()
@@ -56,15 +67,15 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("player"))
-        {
-            foreach (WeaponSlot weaponSlot in _weaponSlots)
-            {
-                weaponSlot.Item.Fire(Vector2.zero);
-            }
+        //if (collision.CompareTag("player"))
+        //{
+        //    foreach (WeaponSlot weaponSlot in _weaponSlots)
+        //    {
+        //        weaponSlot.Item.Fire(Vector2.zero);
+        //    }
             
-            _lookAtPlayer = true;
-        }
+        //    _lookAtPlayer = true;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,7 +83,9 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("player"))
         {
             _healthBar.Color = alarmColor;
-//            _lookAtPlayer = true;
+            _lookAtPlayer = true;
+            StartCoroutine(DelayFire(fireCooldown));
+           // _fire = true;
         }
     }
 
@@ -82,7 +95,15 @@ public class Enemy : MonoBehaviour
         {
             _healthBar.Color = restColor;
             _lookAtPlayer = false;
+            StopCoroutine(DelayFire(fireCooldown));
+            _fire = false;
+
         }
     }
 
+    IEnumerator DelayFire(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        _fire = true;
+    }
 }

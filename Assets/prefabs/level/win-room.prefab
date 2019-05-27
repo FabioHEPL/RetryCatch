@@ -1362,8 +1362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fa8cf328cb56e458dfbb39a601015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSpawn: {fileID: 0}
-  nextCamera: {fileID: 0}
+  nextSpawn: {x: 0, y: 0, z: 0}
+  nextCamera: {x: 0, y: 0, z: 0}
 --- !u!1 &7470016790494926075
 GameObject:
   m_ObjectHideFlags: 0

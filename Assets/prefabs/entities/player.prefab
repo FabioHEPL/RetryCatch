@@ -204,8 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 304981131}
-  _hpRenderer: {fileID: 0}
-  _percentage: 100
 --- !u!1 &1502024596674114598
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 1.25
-  _inventory: {fileID: 0}
 --- !u!114 &1502024596748808356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +324,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponSlot: {fileID: 131255528}
-  _inventory: {fileID: 0}
 --- !u!50 &2039774367
 Rigidbody2D:
   serializedVersion: 4
@@ -361,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5de58c72821b746ae5d2e6282759ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 9999
   minHealth: 0
   _health: 100
 --- !u!1 &5770158924398014919
