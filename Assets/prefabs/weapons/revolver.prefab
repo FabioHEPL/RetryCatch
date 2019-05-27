@@ -112,8 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireDistance: 1.25
   bullet: {fileID: 8641965077731924554, guid: 459cedf5b3e16c04fa4f3294cda26941, type: 3}
-  speed: 20
-  cooldown: 0.5
+  cooldown: 0.35
   _ammo: 10
   _id: 0
 --- !u!114 &3248530364443188492

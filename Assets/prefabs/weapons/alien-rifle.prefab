@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5324595189862499980}
   - component: {fileID: 869453131337162637}
   m_Layer: 13
-  m_Name: enemy-rifle
+  m_Name: alien-rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,6 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireDistance: 1
   bullet: {fileID: 2343624956338387922, guid: 097b17441bd507e42943abf4bc59e0b0, type: 3}
-  cooldown: 1
+  cooldown: 0.6
   _ammo: 999
   _id: 1
