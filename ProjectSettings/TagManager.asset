@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - player
+  - enemy
+  - bullet
+  - enemy-bullet
+  - player-bullet
+  - boss
+  - inventory
   layers:
   - Default
   - TransparentFX
@@ -13,13 +20,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - wall
+  - player
+  - weapon
+  - bullet
+  - collectable
+  - enemy
+  - trigger
   - 
   - 
   - 

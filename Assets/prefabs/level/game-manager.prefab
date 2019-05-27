@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7967425306571165376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7967425306571165383}
+  - component: {fileID: 7967425306571165382}
+  m_Layer: 0
+  m_Name: game-manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7967425306571165383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7967425306571165376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1390648, y: -5.8071685, z: -61.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7967425306571165382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7967425306571165376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3edfea84c96e34e8d8757a0e55f17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobbyRoomCamera: {fileID: 0}
+  lobbyRoomSpawn: {fileID: 0}
+  lobbyText: {fileID: 0}
+  winRoomCamera: {fileID: 0}
+  winRoomSpawn: {fileID: 0}
+  playerPrefab: {fileID: 1502024596748808354, guid: 1d4353fb6ba52c64ea7e6d07630bdc45,
+    type: 3}
+  rooms:
+  - prefab: {fileID: 4692596785207346645, guid: 89dbcd603b0453849a839284290e3afb,
+      type: 3}
+    transform: {fileID: 0}
+  - prefab: {fileID: 8277740898927689858, guid: 1c1a1cfa19c63b648aa4168c4061439b,
+      type: 3}
+    transform: {fileID: 0}
+  - prefab: {fileID: 5918666259555414955, guid: d8002c7d2ce996a43a2cd8c055d3e232,
+      type: 3}
+    transform: {fileID: 0}
