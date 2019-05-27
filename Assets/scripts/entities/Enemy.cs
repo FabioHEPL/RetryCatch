@@ -85,7 +85,8 @@ public class Enemy : MonoBehaviour
             _healthBar.Color = alarmColor;
             _lookAtPlayer = true;
             StartCoroutine(DelayFire(fireCooldown));
-           // _fire = true;
+            // _fire = true;
+
         }
     }
 
@@ -95,9 +96,8 @@ public class Enemy : MonoBehaviour
         {
             _healthBar.Color = restColor;
             _lookAtPlayer = false;
-            StopCoroutine(DelayFire(fireCooldown));
+            StopAllCoroutines();
             _fire = false;
-
         }
     }
 
