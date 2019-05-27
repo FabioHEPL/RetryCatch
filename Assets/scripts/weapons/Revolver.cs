@@ -6,7 +6,7 @@ public class Revolver : Weapon
 {
     public float fireDistance = 2.0f;
     public GameObject bullet;
-    public float speed = 20.0f;
+   // public float speed = 20.0f;
     public float cooldown = 1.5f;
 
     public override void Fire(Vector2 direction)

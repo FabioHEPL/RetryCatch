@@ -1,19 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Life : MonoBehaviour
 {    
     public float maxHealth = 100;
-    public float minHealth = 0;    
+    public float minHealth = 0;
 
-    public HealthBar healthBar;
+    protected HealthBar _healthBar;
+
+    public event Action Died;
+
+    protected void OnEnable()
+    {
+        
+    }
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
+        _healthBar = GetComponentInChildren<HealthBar>();
         _health = maxHealth;
-        healthBar.setPercentage(Health);
+        _healthBar.setPercentage(Health);
     }
 
     // Update is called once per frame
@@ -22,14 +31,14 @@ public class Life : MonoBehaviour
         
     }
 
-    public void Die()
+    public virtual void Die()
     {
-        Debug.Log("die");
-        Destroy(this.gameObject);
+        Died?.Invoke();
+        
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         Collider2D collider2D = collision.collider;
         if (collider2D.CompareTag("bullet"))
@@ -37,7 +46,7 @@ public class Life : MonoBehaviour
             Bullet bullet = collider2D.GetComponent<Bullet>();
                                       
             Health -= bullet.Damage;
-            healthBar.setPercentage(Health);
+            
             if (Health <= 0f)
             {
                 Die();
@@ -56,10 +65,12 @@ public class Life : MonoBehaviour
                 _health = minHealth;
             else
                 _health = value;
+
+            _healthBar.setPercentage(_health);
         }
     }
 
-
+    [Header("Debug")]
     [SerializeField]
-    private float _health = 100f;
+    protected float _health = 100f;
 }

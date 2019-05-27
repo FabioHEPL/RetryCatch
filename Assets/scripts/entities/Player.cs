@@ -1,9 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public event Action Died;
+    private Life _life;
+
+    private void Awake()
+    {
+        _inventory = GameObject.FindWithTag("inventory").GetComponent<Inventory>();
+        _life = GetComponent<Life>();
+    }
+
+
+    private void OnLifeDied()
+    {
+        Died?.Invoke();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,12 +66,14 @@ public class Player : MonoBehaviour
     {
         _inventory.OnAmmoCollected += OnInventoryAmmoCollected;
         _inventory.OnWeaponCollected += OnInventoryWeaponCollected;
+        _life.Died += OnLifeDied;
     }
 
     private void OnDisable()
     {
         _inventory.OnAmmoCollected -= OnInventoryAmmoCollected;
         _inventory.OnWeaponCollected -= OnInventoryWeaponCollected;
+        _life.Died -= OnLifeDied;
     }
 
     private void OnInventoryAmmoCollected(Ammo ammo)
@@ -72,9 +90,15 @@ public class Player : MonoBehaviour
             _weaponSlot.Item = weapon;
     }
 
+    public void Reset()
+    {
+        _life.Health = _life.maxHealth;
+        Debug.Log(_life.Health);
+    }
+
     [SerializeField]
     private WeaponSlot _weaponSlot;
 
-    [SerializeField]
+    //[SerializeField]
     private Inventory _inventory;
 }

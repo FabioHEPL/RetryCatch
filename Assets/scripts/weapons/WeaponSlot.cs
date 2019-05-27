@@ -12,6 +12,8 @@ public class WeaponSlot : MonoBehaviour
 
     private void Awake()
     {
+        if (!isEmpty())
+            _item = transform.GetChild(0).GetComponent<Weapon>();
         // TODO:
         //if (_item != null)
         //    setItem(_item);
@@ -43,10 +45,20 @@ public class WeaponSlot : MonoBehaviour
         item.transform.localScale = new Vector3(slotScale.x, slotScale.y, 1);
     }
 
-    [SerializeField]
+    public void Reset()
+    {
+        foreach (Transform t in transform)
+        {
+            Destroy(t.gameObject);
+        }
+
+        _item = null;
+    }
+
+    //[SerializeField]
     private Weapon _item = null;
 
 
-    [SerializeField]
-    private Vector2 slotScale;
+    //[SerializeField]
+    private Vector2 slotScale = new Vector2(1, 1);
 }

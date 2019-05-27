@@ -5,21 +5,41 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     GameObject player;
-    public WeaponSlot weaponSlot;
-    public int health = 100;
+    private WeaponSlot[] _weaponSlots;
+    public Transform avatar;
+
     
+    private HealthBar _healthBar;
+
+    [Header("Health Bar Settings")]
+    public Color restColor = Color.yellow;
+    public Color alarmColor = Color.red;
+
+    
+    private bool _lookAtPlayer = false;
+
+    private void Awake()
+    {
+        _healthBar = GetComponentInChildren<HealthBar>();
+        player = GameObject.FindWithTag("player");
+        _weaponSlots = GetComponentsInChildren<WeaponSlot>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        _healthBar.Color = restColor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x,
-            transform.localRotation.y,
-            axeDeTire()));
+        if (_lookAtPlayer)
+        {
+            avatar.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x,
+                transform.localRotation.y,
+                axeDeTire()));
+        }
     }
 
     private float axeDeTire()
@@ -38,7 +58,31 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("player"))
         {
-            weaponSlot.Item.Fire(Vector2.zero);            
+            foreach (WeaponSlot weaponSlot in _weaponSlots)
+            {
+                weaponSlot.Item.Fire(Vector2.zero);
+            }
+            
+            _lookAtPlayer = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("player"))
+        {
+            _healthBar.Color = alarmColor;
+//            _lookAtPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("player"))
+        {
+            _healthBar.Color = restColor;
+            _lookAtPlayer = false;
+        }
+    }
+
 }

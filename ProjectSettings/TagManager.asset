@@ -7,6 +7,10 @@ TagManager:
   - player
   - enemy
   - bullet
+  - enemy-bullet
+  - player-bullet
+  - boss
+  - inventory
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - 
   - wall
   - player
-  - 
+  - weapon
   - bullet
   - collectable
   - enemy

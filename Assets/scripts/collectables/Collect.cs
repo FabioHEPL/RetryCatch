@@ -40,7 +40,8 @@ public class Collect : MonoBehaviour, IAction
     // @ PRIVATE
     // -------------------------------------------------------------------------------------
     private void Awake()
-    {       
+    {
+        _inventory = GameObject.FindWithTag("inventory").GetComponent<Inventory>();
         //_inventory = GetComponent<Inventory>();
         if (_inventory == null)
         {
@@ -66,6 +67,6 @@ public class Collect : MonoBehaviour, IAction
 
     [SerializeField]
     private float _radius = 5f;
-    [SerializeField]
+    //[SerializeField]
     private Inventory _inventory;
 }
