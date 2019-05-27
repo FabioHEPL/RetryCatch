@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 13.333333
-  _speed: 10
+  _speed: 7
   _lifeSpan: 2
 --- !u!50 &3206205594614435845
 Rigidbody2D:
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 13.333333
-  _speed: 10
+  _speed: 7
   _lifeSpan: 2
 --- !u!50 &344792129995338669
 Rigidbody2D:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 13.333333
-  _speed: 10
+  _speed: 7
   _lifeSpan: 2
 --- !u!50 &2183066533830998369
 Rigidbody2D:

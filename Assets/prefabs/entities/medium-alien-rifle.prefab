@@ -216,8 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 4914343596551125212}
-  _hpRenderer: {fileID: 0}
-  _percentage: 100
 --- !u!1 &4914343597487907310
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ea0d9de65346a40812529af4bb5576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 90
   minHealth: 0
   _health: 100
 --- !u!1 &7859723822505504486
@@ -543,11 +541,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7859723822505504487}
     m_Modifications:
-    - target: {fileID: 5324595189862499983, guid: 59f5dc2dc16e70c478645d76d0d09db9,
-        type: 3}
-      propertyPath: m_Name
-      value: alien-rifle
-      objectReference: {fileID: 0}
     - target: {fileID: 5324595189862499981, guid: 59f5dc2dc16e70c478645d76d0d09db9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,6 +595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324595189862499983, guid: 59f5dc2dc16e70c478645d76d0d09db9,
+        type: 3}
+      propertyPath: m_Name
+      value: alien-rifle
       objectReference: {fileID: 0}
     - target: {fileID: 869453131337162637, guid: 59f5dc2dc16e70c478645d76d0d09db9,
         type: 3}
@@ -624,11 +622,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4914343596682508530}
     m_Modifications:
-    - target: {fileID: 5324595189862499983, guid: 59f5dc2dc16e70c478645d76d0d09db9,
-        type: 3}
-      propertyPath: m_Name
-      value: alien-rifle
-      objectReference: {fileID: 0}
     - target: {fileID: 5324595189862499981, guid: 59f5dc2dc16e70c478645d76d0d09db9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -683,6 +676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324595189862499983, guid: 59f5dc2dc16e70c478645d76d0d09db9,
+        type: 3}
+      propertyPath: m_Name
+      value: alien-rifle
       objectReference: {fileID: 0}
     - target: {fileID: 869453131337162637, guid: 59f5dc2dc16e70c478645d76d0d09db9,
         type: 3}

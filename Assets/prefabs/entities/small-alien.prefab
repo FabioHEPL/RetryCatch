@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ea0d9de65346a40812529af4bb5576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 65
   minHealth: 0
   _health: 100
 --- !u!1 &1705010768328643765
@@ -443,8 +443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 1705010767812358603}
-  _hpRenderer: {fileID: 0}
-  _percentage: 100
 --- !u!1 &1705010769821173112
 GameObject:
   m_ObjectHideFlags: 0
