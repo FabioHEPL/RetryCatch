@@ -17,6 +17,13 @@ public class Player : MonoBehaviour
 
     private void OnLifeDied()
     {
+        // drop all items in inventory
+        // 1. drop all guns
+        // 2. drop gun in weapon slot (if any)
+        // 3. drop ammo in same amount
+
+
+
         Died?.Invoke();
     }
 
@@ -93,7 +100,7 @@ public class Player : MonoBehaviour
     public void Reset()
     {
         _life.Health = _life.maxHealth;
-        Debug.Log(_life.Health);
+        //Debug.Log(_life.Health);
     }
 
     [SerializeField]

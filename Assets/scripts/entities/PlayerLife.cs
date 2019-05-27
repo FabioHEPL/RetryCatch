@@ -11,7 +11,7 @@ public class PlayerLife : Life
             Bullet bullet = collider2D.GetComponent<Bullet>();
 
             Health -= bullet.Damage;
-            _healthBar.setPercentage(Health);
+            //_healthBar.setPercentage(Health);
             if (Health <= 0f)
             {
                 Die();

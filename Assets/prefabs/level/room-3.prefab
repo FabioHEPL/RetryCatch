@@ -17893,6 +17893,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.x
+      value: -7.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.y
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2565672979039825082, guid: 799b0563c975c9249873ab675082dcd1,
         type: 3}
       propertyPath: m_Offset.y

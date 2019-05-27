@@ -10841,8 +10841,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 7849011516243986269}
-  _hpRenderer: {fileID: 0}
-  _percentage: 100
 --- !u!1 &7849011514932787569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10927,7 +10925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ea0d9de65346a40812529af4bb5576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1000
   minHealth: 0
   _health: 100
 --- !u!114 &7849011514932787574
@@ -12960,6 +12958,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.x
+      value: 23.16003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.y
+      value: 4.179962
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextCamera.x
+      value: 30.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextCamera.y
+      value: 8.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2565672979039825082, guid: 799b0563c975c9249873ab675082dcd1,
         type: 3}
       propertyPath: m_Offset.y
@@ -13149,6 +13167,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.x
+      value: -22.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextSpawn.y
+      value: 8.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextCamera.x
+      value: -30.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079636223649940128, guid: 799b0563c975c9249873ab675082dcd1,
+        type: 3}
+      propertyPath: nextCamera.y
+      value: 10.81
       objectReference: {fileID: 0}
     - target: {fileID: 2565672979039825082, guid: 799b0563c975c9249873ab675082dcd1,
         type: 3}

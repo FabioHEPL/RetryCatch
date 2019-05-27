@@ -22,7 +22,7 @@ public class Life : MonoBehaviour
     {
         _healthBar = GetComponentInChildren<HealthBar>();
         _health = maxHealth;
-        _healthBar.setPercentage(Health);
+        //_healthBar.setPercentage(Health);
     }
 
     // Update is called once per frame
@@ -65,8 +65,6 @@ public class Life : MonoBehaviour
                 _health = minHealth;
             else
                 _health = value;
-
-            _healthBar.setPercentage(_health);
         }
     }
 
