@@ -10913,6 +10913,8 @@ MonoBehaviour:
   avatar: {fileID: 7849011515032215150}
   restColor: {r: 1, g: 0.7467409, b: 0, a: 1}
   alarmColor: {r: 1, g: 0, b: 0, a: 1}
+  _fire: 0
+  fireCooldown: 1
 --- !u!114 &6309854635075845627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13331,7 +13333,7 @@ PrefabInstance:
     - target: {fileID: 7007451450627820945, guid: 9c911750a40840349a2d76d80305399e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.83
+      value: -0.589
       objectReference: {fileID: 0}
     - target: {fileID: 7007451450627820945, guid: 9c911750a40840349a2d76d80305399e,
         type: 3}
